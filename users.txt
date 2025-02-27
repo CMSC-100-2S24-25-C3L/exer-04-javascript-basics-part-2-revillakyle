@@ -1,3 +1,6 @@
 Kyle,Revilla,klrevilla1@up.edu.ph,20,krevillaf13c56f1
 Mark,Mark,marc@marc.mark,200,mmarkaf0b5a27
 Dashiel,Labis,dmlabis@up.edu.ph,20,dlabis6b1066bb
+Test,Testing,test@test.com,89,ttesting1290e73d
+Dashi,Labis,dmlabis@up.edu.ph,20,dlabisfb6de082
+Kyle,Revilla,klrevilla1@up.edu.ph,20,krevilla643e4937

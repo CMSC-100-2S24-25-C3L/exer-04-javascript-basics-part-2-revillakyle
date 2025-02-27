@@ -48,16 +48,6 @@ function addAccount(first,last,email,age){
 
     return "user has been added to the database";
 
-
-    
-
-
-
-
-
 }
 
-
-
-console.log(generateUniqueID("Frederick","Rick"));
-console.log(addAccount("Dashiel","Labis","dmlabis@up.edu.ph",20));
+export default {addAccount,generateUniqueID};
