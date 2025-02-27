@@ -1,4 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
+import validator from 'validator';
+import { appendFileSync } from 'node:fs';
+
+
 function generateUniqueID(first,last){
     //generate lowercase string first
     let firstLetter=first.charAt(0).toLowerCase();
@@ -21,4 +25,39 @@ function generateUniqueID(first,last){
     return uniqueId;
 }
 
+function addAccount(first,last,email,age){
+
+    if(typeof first != "string"     || 
+        typeof last != "string"     || 
+        typeof email != "string"    || 
+        typeof age != "number"      ||
+        validator.isEmpty(first)    ||
+        validator.isEmpty(last)     ||
+        validator.isEmpty(email)    ||
+        age==null                   ||
+        !validator.isEmail(email)   ||
+        age<18
+    ){
+        return "invalid account";
+    }
+
+    let uniqueId=generateUniqueID(first,last);
+    let data=first+","+last+","+email+","+age.toString()+","+uniqueId+"\n";
+    
+    appendFileSync("users.txt",data);
+
+    return "user has been added to the database";
+
+
+    
+
+
+
+
+
+}
+
+
+
 console.log(generateUniqueID("Frederick","Rick"));
+console.log(addAccount("Dashiel","Labis","dmlabis@up.edu.ph",20));
