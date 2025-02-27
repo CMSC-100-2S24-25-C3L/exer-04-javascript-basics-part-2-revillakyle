@@ -1,0 +1,17 @@
+{
+  "name": "exer4",
+  "version": "1.0.0",
+  "description": "exer4 for cmsc 100",
+  "main": "index.js",
+  "scripts": {
+    "test": "clear"
+  },
+  "author": "Kyle Revilla",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "snake-case": "^4.0.0",
+    "uuid": "^11.1.0",
+    "validator": "^13.12.0"
+  }
+}
